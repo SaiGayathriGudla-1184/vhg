@@ -544,3 +544,157 @@
         flex-wrap: wrap;
     }
 } 
+
+/* --- In catalog.css --- */
+
+.plants-container {
+    display: grid;
+    /* Adjust minmax(300px, 1fr) as needed for desired card size and responsiveness */
+    /* This creates responsive columns. Cards will have minimum 300px width */
+    /* and grow equally to fill the available space. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Adjust spacing between cards */
+    align-items: stretch; /* Default, but good to be explicit: makes grid items stretch vertically */
+}
+
+.plant-card {
+    display: flex; /* Use flexbox internally for card structure */
+    flex-direction: column; /* Stack image and info vertically */
+    border: 1px solid #e0e0e0; /* Optional: adds a subtle border */
+    border-radius: 8px; /* Optional: rounded corners */
+    overflow: hidden; /* Ensures content doesn't spill */
+    background-color: #fff; /* Optional: set a background */
+    /* The grid container (.plants-container) handles making cards in the same row equal height */
+}
+
+.plant-image {
+    position: relative; /* For positioning overlay */
+    width: 100%;
+    /* Add a consistent aspect ratio for images to prevent height variations */
+    aspect-ratio: 4 / 3; /* Example ratio: adjust (e.g., 16/9, 1/1) as desired */
+}
+
+.plant-image img {
+    display: block; /* Removes potential bottom space under image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion, maintaining aspect ratio */
+}
+
+.plant-info {
+    display: flex; /* Make info section a flex container */
+    flex-direction: column; /* Stack its contents vertically */
+    flex-grow: 1; /* CRITICAL: Allows this section to grow and fill remaining vertical space in the card */
+    padding: 15px; /* Add some padding inside the info area */
+}
+
+.plant-info h3 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 5px; /* Adjust spacing */
+}
+
+.scientific-name {
+    margin-bottom: 10px; /* Spacing below scientific name */
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    min-height: 1.2em; /* Reserve a little space even if empty */
+}
+
+.plant-meta {
+    margin-bottom: 15px; /* Spacing below meta info */
+    display: flex;
+    gap: 15px; /* Space between difficulty and growth */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+/* Styling for the specific card with details shown */
+.plant-details {
+    margin-bottom: 15px; /* Space below the details section */
+    /* flex-grow: 1; */ /* Optional: if you want details to take more space before actions */
+}
+
+.detail-section {
+    margin-bottom: 10px;
+}
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+.detail-section h4 {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+.detail-section ul {
+    padding-left: 20px;
+    margin: 0;
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.4;
+}
+.detail-section p {
+     font-size: 0.85em;
+     color: #555;
+     margin: 0;
+     line-height: 1.4;
+}
+
+
+/* Styling for simpler cards (like Neem, Ashwagandha in example) */
+.plant-description {
+    margin-bottom: 15px; /* Space below description */
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    /* flex-grow: 1; */ /* Optional: If you want description to fill space before actions */
+}
+
+
+.plant-actions {
+    margin-top: auto; /* CRITICAL: Pushes the action buttons to the bottom of the .plant-info flex container */
+    padding-top: 15px; /* Add some space above the buttons */
+    border-top: 1px solid #eee; /* Optional visual separator */
+    display: flex; /* Align buttons nicely */
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+/* Ensure buttons look consistent */
+.plant-actions .btn {
+    padding: 8px 12px; /* Adjust button padding */
+    font-size: 0.9em; /* Adjust button font size */
+}
+
+/* Add this if your buttons aren't already defined */
+.btn {
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.btn-outline {
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #333;
+}
+.btn-outline:hover {
+    background-color: #f0f0f0;
+}
+.btn-primary {
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-secondary {
+    border: 1px solid #6c757d;
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+     background-color: #5a6268;
+     border-color: #545b62;
+}
