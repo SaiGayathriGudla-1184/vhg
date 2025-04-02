@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/logo.png" alt="Virtual Herbal Garden Logo" class="logo">
+            <span>Virtual Herbal Garden</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="tours.html">Virtual Tours</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="user-menu">
+            <img src="assets/profile/avatar.png" alt="User Avatar" class="avatar">
+            <div class="dropdown-menu">
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the World of Herbal Medicine</h1>
+            <p>Explore our virtual garden of medicinal plants and learn about their traditional uses and modern applications.</p>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for plants, remedies, or topics...">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Plants Section -->
+    <section class="featured-plants">
+        <h2>Featured Plants</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="plant-card">
+                        <img src="assets/plants/tulasi.jpg" alt="Tulsi">
+                        <div class="plant-info">
+                            <h3>Tulsi (Holy Basil)</h3>
+                            <p>Known for its adaptogenic properties and stress-relieving benefits.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="plant-card">
+                        <img src="assets/plants/neem.jpg" alt="Neem">
+                        <div class="plant-info">
+                            <h3>Neem</h3>
+                            <p>Traditional remedy for skin health and immune support.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="plant-card">
+                        <img src="assets/plants/ashwagandha.jpg" alt="Ashwagandha">
+                        <div class="plant-info">
+                            <h3>Ashwagandha</h3>
+                            <p>Powerful adaptogen for stress management and vitality.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Explore Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Medicinal Plants</h3>
+                <p>Discover plants with healing properties</p>
+                <a href="catalog.html#medicinal" class="category-link">Explore</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-mortar-pestle"></i>
+                <h3>Traditional Remedies</h3>
+                <p>Learn about ancient healing practices</p>
+                <a href="catalog.html#remedies" class="category-link">Explore</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-book-medical"></i>
+                <h3>Research Papers</h3>
+                <p>Access scientific studies and findings</p>
+                <a href="catalog.html#research" class="category-link">Explore</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Learning Resources</h3>
+                <p>Educational materials and guides</p>
+                <a href="catalog.html#learning" class="category-link">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plants Section -->
+    <section class="plants-section">
+        <div class="section-header">
+            <h2>Popular Plants</h2>
+            <div class="section-tabs">
+                <button class="tab active">All</button>
+                <button class="tab">Medicinal</button>
+                <button class="tab">Aromatic</button>
+                <button class="tab">Culinary</button>
+            </div>
+        </div>
+        <div class="plants-grid">
+            <div class="plant-item">
+                <img src="assets/plants/mint.jpg" alt="Aloe Vera">
+                <div class="plant-details">
+                    <h3>Aloe Vera</h3>
+                    <p>Known for its soothing and healing properties</p>
+                    <div class="plant-meta">
+                        <span><i class="fas fa-leaf"></i> Medicinal</span>
+                        <span><i class="fas fa-globe-asia"></i> Tropical</span>
+                    </div>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            </div>
+            <div class="plant-item">
+                <img src="assets/plants/basil.jpg" alt="Ginger">
+                <div class="plant-details">
+                    <h3>Ginger</h3>
+                    <p>Traditional remedy for digestive health</p>
+                    <div class="plant-meta">
+                        <span><i class="fas fa-leaf"></i> Medicinal</span>
+                        <span><i class="fas fa-globe-asia"></i> Asian</span>
+                    </div>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            </div>
+            <div class="plant-item">
+                <img src="assets/plants/cinnamon.jpg" alt="Peppermint">
+                <div class="plant-details">
+                    <h3>Peppermint</h3>
+                    <p>Refreshing herb with digestive benefits</p>
+                    <div class="plant-meta">
+                        <span><i class="fas fa-leaf"></i> Aromatic</span>
+                        <span><i class="fas fa-globe-europe"></i> European</span>
+                    </div>
+                    <button class="learn-more">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest updates on herbal medicine and wellness.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Virtual Herbal Garden is your comprehensive resource for learning about medicinal plants and traditional healing practices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="catalog.html">Plant Catalog</a></li>
+                    <li><a href="tours.html">Virtual Tours</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="research.html">Research Papers</a></li>
+                    <li><a href="guides.html">Learning Guides</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@virtualherbalgarden.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Garden Street, Nature City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Virtual Herbal Garden</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/logo.png" alt="Virtual Herbal Garden Logo" class="logo">
+            <span>Virtual Herbal Garden</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="tours.html">Virtual Tours</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="user-menu">
+            <img src="assets/avatar.png" alt="User Avatar" class="avatar">
+            <div class="dropdown-menu">
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="user-profile">
+                <div class="profile-image">
+                    <img src="assets/avatar.png" alt="User Profile">
+                    <span class="status-badge online"></span>
+                </div>
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>Herbal Medicine Enthusiast</p>
+                </div>
+            </div>
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>Learning Progress</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">
+                    <i class="fas fa-home"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-book"></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-bookmark"></i>
+                    <span>Saved Content</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="quick-actions">
+                <button class="action-btn">
+                    <i class="fas fa-plus"></i>
+                    <span>New Course</span>
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-trophy"></i>
+                    <span>Achievements</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section class="overview-section">
+                <div class="section-header">
+                    <h1>Welcome back, John!</h1>
+                    <div class="date-range">
+                        <button class="date-btn active">Today</button>
+                        <button class="date-btn">Week</button>
+                        <button class="date-btn">Month</button>
+                        <button class="date-btn">Year</button>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Courses Completed</h3>
+                            <p class="stat-number">12</p>
+                            <span class="stat-change positive">+2 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Study Hours</h3>
+                            <p class="stat-number">48</p>
+                            <span class="stat-change positive">+5 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Achievement Points</h3>
+                            <p class="stat-number">850</p>
+                            <span class="stat-change positive">+50 this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Study Groups</h3>
+                            <p class="stat-number">3</p>
+                            <span class="stat-change neutral">No change</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Completed "Medicinal Plants Basics"</h4>
+                                <p>You've successfully completed the course and earned a certificate!</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Earned "Herbal Expert" Badge</h4>
+                                <p>Congratulations! You've earned a new achievement badge.</p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Joined "Advanced Herbalism" Group</h4>
+                                <p>You've joined a new study group for advanced learners.</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Progress -->
+                <div class="progress-section">
+                    <h2>Learning Progress</h2>
+                    <div class="progress-chart">
+                        <canvas id="progressChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Recent Bookmarks -->
+                <div class="bookmarks-section">
+                    <h2>Recent Bookmarks</h2>
+                    <div class="bookmarks-grid">
+                        <div class="bookmark-card">
+                            <img src="assets/plants/tulsi.jpg" alt="Tulsi">
+                            <div class="bookmark-info">
+                                <h3>Tulsi (Holy Basil)</h3>
+                                <p>Medicinal properties and traditional uses</p>
+                                <div class="bookmark-meta">
+                                    <span><i class="fas fa-book"></i> Course Material</span>
+                                    <span><i class="fas fa-clock"></i> 2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookmark-card">
+                            <img src="assets/plants/neem.jpg" alt="Neem">
+                            <div class="bookmark-info">
+                                <h3>Neem Tree</h3>
+                                <p>Traditional remedies and modern applications</p>
+                                <div class="bookmark-meta">
+                                    <span><i class="fas fa-book"></i> Course Material</span>
+                                    <span><i class="fas fa-clock"></i> 3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookmark-card">
+                            <img src="assets/plants/ashwagandha.jpg" alt="Ashwagandha">
+                            <div class="bookmark-info">
+                                <h3>Ashwagandha</h3>
+                                <p>Stress management and vitality benefits</p>
+                                <div class="bookmark-meta">
+                                    <span><i class="fas fa-book"></i> Course Material</span>
+                                    <span><i class="fas fa-clock"></i> 5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Study Streak -->
+                <div class="streak-section">
+                    <h2>Study Streak</h2>
+                    <div class="streak-calendar">
+                        <div class="streak-info">
+                            <div class="current-streak">
+                                <span class="streak-number">7</span>
+                                <span class="streak-label">Day Streak</span>
+                            </div>
+                            <div class="streak-stats">
+                                <div class="stat">
+                                    <span class="stat-value">7</span>
+                                    <span class="stat-label">Current</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">14</span>
+                                    <span class="stat-label">Longest</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="streak-days">
+                            <div class="day active">
+                                <span class="day-name">Mon</span>
+                                <span class="day-date">15</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Tue</span>
+                                <span class="day-date">16</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Wed</span>
+                                <span class="day-date">17</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Thu</span>
+                                <span class="day-date">18</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Fri</span>
+                                <span class="day-date">19</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Sat</span>
+                                <span class="day-date">20</span>
+                            </div>
+                            <div class="day active">
+                                <span class="day-name">Sun</span>
+                                <span class="day-date">21</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Virtual Herbal Garden is your gateway to traditional medicinal knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="catalog.html">Plant Catalog</a></li>
+                    <li><a href="tours.html">Virtual Tours</a></li>
+                    <li><a href="about.html#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="dashboard.js"></script>
+</body>
+</html> 

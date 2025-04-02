@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Virtual Herbal Garden" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Catalog</a>
+                <a href="tours.html">Virtual Tours</a>
+                <a href="learn.html">Learn</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-user">
+                <button class="btn-outline" aria-label="View notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="user-menu">
+                    <img src="assets/profile/avatar.png" alt="User profile" class="avatar">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="settings-container">
+        <div class="settings-sidebar">
+            <h2>Settings</h2>
+            <nav class="settings-nav">
+                <a href="#profile" class="active">
+                    <i class="fas fa-user"></i>
+                    Profile Settings
+                </a>
+                <a href="#account">
+                    <i class="fas fa-shield-alt"></i>
+                    Account Security
+                </a>
+                <a href="#notifications">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </a>
+                <a href="#preferences">
+                    <i class="fas fa-sliders-h"></i>
+                    Preferences
+                </a>
+                <a href="#privacy">
+                    <i class="fas fa-lock"></i>
+                    Privacy
+                </a>
+                <a href="#accessibility">
+                    <i class="fas fa-universal-access"></i>
+                    Accessibility
+                </a>
+            </nav>
+        </div>
+
+        <div class="settings-content">
+            <section id="profile" class="settings-section active">
+                <h1>Profile Settings</h1>
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="assets/profile/avatar.png" alt="Profile picture" class="avatar">
+                        <button class="change-photo-btn">
+                            <i class="fas fa-camera"></i>
+                            Change Photo
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h3>John Doe</h3>
+                        <p>Member since January 2024</p>
+                    </div>
+                </div>
+
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" value="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" value="+1 234 567 8900">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" rows="4">Herbal medicine enthusiast and nature lover.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" value="New York, USA">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                        <button type="reset" class="btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Tours - Herbal Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tours.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Virtual Herbal Garden" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Catalog</a>
+                <a href="tours.html" class="active">Virtual Tours</a>
+                <a href="learn.html">Learn</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-user">
+                <button class="btn-outline" aria-label="Open search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-outline" aria-label="View notifications">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="user-menu">
+                    <img src="assets/profile/avatar.png" alt="User profile" class="avatar">
+                    <div class="dropdown-menu">
+                        <a href="profile.html">My Profile</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="settings.html">Settings</a>
+                        <a href="#" class="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tours-container">
+        <section class="tours-hero">
+            <div class="hero-content">
+                <h1>Virtual Garden Tours</h1>
+                <p>Explore our curated collections of medicinal plants through interactive guided tours</p>
+            </div>
+        </section>
+
+        <section class="tour-categories">
+            <div class="category-grid">
+                <!-- Digestive Health Garden -->
+                <div class="tour-card" data-tour="digestive">
+                    <div class="tour-image">
+                        <img src="assets/tours/t1.jpeg" alt="Digestive Health Garden">
+                        <div class="tour-progress">
+                            <div class="progress-bar" style="width: 60%"></div>
+                            <span class="progress-text">60% Complete</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Digestive Health Garden</h3>
+                        <p>Discover plants that promote digestive wellness and gut health</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 30 mins</span>
+                            <span><i class="fas fa-leaf"></i> 12 plants</span>
+                        </div>
+                        <button class="btn-primary">Start Tour</button>
+                    </div>
+                </div>
+
+                <!-- Immunity Boosting Plants -->
+                <div class="tour-card" data-tour="immunity">
+                    <div class="tour-image">
+                        <img src="assets/tours/t2.jpeg" alt="Immunity Boosting Plants">
+                        <div class="tour-progress">
+                            <div class="progress-bar" style="width: 30%"></div>
+                            <span class="progress-text">30% Complete</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Immunity Boosting Plants</h3>
+                        <p>Explore plants that enhance your immune system naturally</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 45 mins</span>
+                            <span><i class="fas fa-leaf"></i> 15 plants</span>
+                        </div>
+                        <button class="btn-primary">Continue Tour</button>
+                    </div>
+                </div>
+
+                <!-- Skin Care Collection -->
+                <div class="tour-card" data-tour="skincare">
+                    <div class="tour-image">
+                        <img src="assets/tours/t3.jpeg" alt="Skin Care Collection">
+                        <div class="tour-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                            <span class="progress-text">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Skin Care Collection</h3>
+                        <p>Discover natural herbs for healthy, glowing skin</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 35 mins</span>
+                            <span><i class="fas fa-leaf"></i> 10 plants</span>
+                        </div>
+                        <button class="btn-primary">Start Tour</button>
+                    </div>
+                </div>
+
+                <!-- Stress Relief Garden -->
+                <div class="tour-card" data-tour="stress-relief">
+                    <div class="tour-image">
+                        <img src="assets/tours/t4.jpeg" alt="Stress Relief Garden">
+                        <div class="tour-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                            <span class="progress-text">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Stress Relief Garden</h3>
+                        <p>Explore calming herbs for mental wellness and relaxation</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 40 mins</span>
+                            <span><i class="fas fa-leaf"></i> 14 plants</span>
+                        </div>
+                        <button class="btn-primary">Start Tour</button>
+                    </div>
+                </div>
+
+                <!-- Traditional Remedies -->
+                <div class="tour-card" data-tour="traditional">
+                    <div class="tour-image">
+                        <img src="assets/tours/t5.jpeg" alt="Traditional Remedies">
+                        <div class="tour-progress">
+                            <div class="progress-bar" style="width: 0%"></div>
+                            <span class="progress-text">Not Started</span>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3>Traditional Remedies</h3>
+                        <p>Learn about time-tested herbal remedies from AYUSH systems</p>
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 50 mins</span>
+                            <span><i class="fas fa-leaf"></i> 18 plants</span>
+                        </div>
+                        <button class="btn-primary">Start Tour</button>
+                    </div>
+                </div>
+
+                <!-- Similar cards for other categories -->
+            </div>
+        </section>
+
+        <!-- Tour Guide Modal -->
+        <div class="tour-guide-modal" id="tourGuideModal">
+            <div class="guide-content">
+                <div class="guide-header">
+                    <h2>Tour Guide</h2>
+                    <button class="close-btn" aria-label="Close tour guide">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="guide-body">
+                    <div class="plant-viewer">
+                        <div class="plant-image">
+                            <div class="model-container">
+                                <!-- 3D model container -->
+                            </div>
+                            <div class="view-controls">
+                                <button class="view-btn" aria-label="Rotate left">
+                                    <i class="fas fa-undo"></i>
+                                </button>
+                                <button class="view-btn" aria-label="Zoom in">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                                <button class="view-btn" aria-label="Zoom out">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                                <button class="view-btn" aria-label="Reset view">
+                                    <i class="fas fa-sync"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="audio-controls">
+                            <button class="audio-btn" aria-label="Play audio">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="audio-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="audio-time">0:00</span>
+                            <button class="volume-btn" aria-label="Adjust volume">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="plant-info">
+                        <h3>Plant Name</h3>
+                        <div class="info-tabs">
+                            <button class="tab-btn active" data-tab="overview">Overview</button>
+                            <button class="tab-btn" data-tab="medicinal">Medicinal Uses</button>
+                            <button class="tab-btn" data-tab="cultivation">Cultivation</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="overview">
+                                <p class="plant-description"></p>
+                            </div>
+                            <div class="tab-pane" id="medicinal">
+                                <ul class="medicinal-uses"></ul>
+                            </div>
+                            <div class="tab-pane" id="cultivation">
+                                <div class="cultivation-info"></div>
+                            </div>
+                        </div>
+                        <div class="location-map">
+                            <!-- Interactive map will be loaded here -->
+                        </div>
+                        <div class="user-interactions">
+                            <button class="btn-outline" aria-label="Take notes">
+                                <i class="fas fa-pencil-alt"></i> Notes
+                            </button>
+                            <button class="btn-outline" aria-label="Add to favorites">
+                                <i class="fas fa-heart"></i> Favorite
+                            </button>
+                            <button class="btn-outline" aria-label="Share">
+                                <i class="fas fa-share-alt"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-footer">
+                    <button class="btn-secondary" id="prevPlant">Previous</button>
+                    <div class="tour-progress">
+                        <span class="current-step">1</span>
+                        <span class="total-steps">/ 12</span>
+                    </div>
+                    <button class="btn-primary" id="nextPlant">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Footer content -->
+    </footer>
+
+    <script src="tours.js"></script>
+</body>
+</html> 

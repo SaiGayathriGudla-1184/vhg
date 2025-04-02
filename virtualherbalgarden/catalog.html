@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Catalog - Virtual Herbal Garden</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/logo.png" alt="Virtual Herbal Garden Logo" class="logo">
+            <span>Virtual Herbal Garden</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="catalog.html" class="active">Catalog</a>
+            <a href="tours.html">Virtual Tours</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="user-menu">
+            <img src="assets/avatar.png" alt="User Avatar" class="avatar">
+            <div class="dropdown-menu">
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Catalog Header -->
+    <header class="catalog-header">
+        <div class="header-content">
+            <h1>Plant Catalog</h1>
+            <p>Explore our comprehensive collection of medicinal plants and herbs</p>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search plants...">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="catalog-main">
+        <div class="catalog-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="medicinal">
+                            <span>Medicinal Plants</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="aromatic">
+                            <span>Aromatic Herbs</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="flowering">
+                            <span>Flowering Plants</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="trees">
+                            <span>Trees & Shrubs</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Properties</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="property" value="anti-inflammatory">
+                            <span>Anti-inflammatory</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="property" value="antioxidant">
+                            <span>Antioxidant</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="property" value="immune-boosting">
+                            <span>Immune Boosting</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="property" value="digestive">
+                            <span>Digestive Aid</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Growing Conditions</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="condition" value="sunny">
+                            <span>Full Sun</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="condition" value="partial">
+                            <span>Partial Shade</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="condition" value="shade">
+                            <span>Full Shade</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="condition" value="indoor">
+                            <span>Indoor</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Difficulty Level</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="difficulty" value="beginner">
+                            <span>Beginner</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="difficulty" value="intermediate">
+                            <span>Intermediate</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="difficulty" value="advanced">
+                            <span>Advanced</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Plant Grid -->
+            <section class="plant-grid">
+                <div class="grid-header">
+                    <div class="results-info">
+                        <span>Showing 24 of 120 plants</span>
+                    </div>
+                    <div class="sort-options">
+                        <select class="sort-select" aria-label="Sort by">
+                            <option value="name">Name</option>
+                            <option value="difficulty">Difficulty</option>
+                            <option value="growth">Growth Rate</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="plants-container">
+                    <!-- Plant Card 1 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="assets/plants/tulsi.jpg" alt="Tulsi (Holy Basil)">
+                            <div class="plant-overlay">
+                                <button class="quick-view-btn" aria-label="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="bookmark-btn" aria-label="Add to bookmarks">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="model-view-btn" aria-label="View 3D model">
+                                    <i class="fas fa-cube"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Tulsi (Holy Basil)</h3>
+                            <p class="scientific-name">Ocimum sanctum</p>
+                            <div class="plant-meta">
+                                <span class="difficulty">
+                                    <i class="fas fa-seedling"></i>
+                                    Beginner
+                                </span>
+                                <span class="growth">
+                                    <i class="fas fa-sun"></i>
+                                    Full Sun
+                                </span>
+                            </div>
+                            <div class="plant-details">
+                                <div class="detail-section">
+                                    <h4>Medicinal Uses</h4>
+                                    <ul>
+                                        <li>Stress relief and anxiety management</li>
+                                        <li>Immune system support</li>
+                                        <li>Respiratory health</li>
+                                        <li>Digestive aid</li>
+                                    </ul>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Cultivation</h4>
+                                    <p>Prefers well-drained soil, regular watering, and full sunlight. Can be grown indoors or outdoors.</p>
+                                </div>
+                                <div class="detail-section">
+                                    <h4>Habitat</h4>
+                                    <p>Native to the Indian subcontinent, thrives in tropical and subtropical climates.</p>
+                                </div>
+                            </div>
+                            <div class="plant-actions">
+                                <button class="btn btn-outline" aria-label="Learn more about Tulsi">Learn More</button>
+                                <button class="btn btn-primary" aria-label="Add Tulsi to your garden">Add to Garden</button>
+                                <button class="btn btn-secondary" aria-label="Share Tulsi information">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 2 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="assets/plants/neem.jpg" alt="Neem Tree">
+                            <div class="plant-overlay">
+                                <button class="quick-view-btn" aria-label="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="bookmark-btn" aria-label="Add to bookmarks">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Neem Tree</h3>
+                            <p class="scientific-name">Azadirachta indica</p>
+                            <div class="plant-meta">
+                                <span class="difficulty">
+                                    <i class="fas fa-seedling"></i>
+                                    Intermediate
+                                </span>
+                                <span class="growth">
+                                    <i class="fas fa-sun"></i>
+                                    Full Sun
+                                </span>
+                            </div>
+                            <p class="plant-description">
+                                Versatile tree known for its medicinal properties and natural pest control.
+                            </p>
+                            <div class="plant-actions">
+                                <button class="btn btn-outline" aria-label="Learn more about Neem Tree">Learn More</button>
+                                <button class="btn btn-primary" aria-label="Add Neem Tree to your garden">Add to Garden</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plant Card 3 -->
+                    <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="assets/plants/ashwagandha.jpg" alt="Ashwagandha">
+                            <div class="plant-overlay">
+                                <button class="quick-view-btn" aria-label="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="bookmark-btn" aria-label="Add to bookmarks">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="plant-info">
+                            <h3>Ashwagandha</h3>
+                            <p class="scientific-name">Withania somnifera</p>
+                            <div class="plant-meta">
+                                <span class="difficulty">
+                                    <i class="fas fa-seedling"></i>
+                                    Advanced
+                                </span>
+                                <span class="growth">
+                                    <i class="fas fa-sun"></i>
+                                    Partial Shade
+                                </span>
+                            </div>
+                            <p class="plant-description">
+                                Adaptogenic herb known for stress management and vitality benefits.
+                            </p>
+                            <div class="plant-actions">
+                                <button class="btn btn-outline" aria-label="Learn more about Ashwagandha">Learn More</button>
+                                <button class="btn btn-primary" aria-label="Add Ashwagandha to your garden">Add to Garden</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more plant cards as needed -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn" aria-label="Go to previous page">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn active" aria-label="Current page 1">1</button>
+                    <button class="page-btn" aria-label="Go to page 2">2</button>
+                    <button class="page-btn" aria-label="Go to page 3">3</button>
+                    <button class="page-btn" aria-label="Go to page 4">4</button>
+                    <button class="page-btn" aria-label="Go to page 5">5</button>
+                    <button class="page-btn" aria-label="Go to next page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Virtual Herbal Garden is your gateway to traditional medicinal knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="catalog.html">Plant Catalog</a></li>
+                    <li><a href="tours.html">Virtual Tours</a></li>
+                    <li><a href="about.html#resources">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="catalog.js"></script>
+</body>
+</html> 

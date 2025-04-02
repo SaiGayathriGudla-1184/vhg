@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Detail - Tulsi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="plant-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Virtual Herbal Garden Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="tours.html">Virtual Tours</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Plant Detail Header -->
+    <header class="plant-header">
+        <div class="plant-header-content">
+            <h1>Tulsi (Holy Basil)</h1>
+            <p>Ocimum sanctum - The Queen of Herbs</p>
+            <div class="action-buttons">
+                <button class="btn bookmark-btn"><i class="fas fa-bookmark"></i> Bookmark</button>
+                <button class="btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="plant-detail-container">
+        <!-- Plant Images Section -->
+        <section class="plant-images">
+            <h2>Plant Images</h2>
+            <div class="image-gallery">
+                <img src="assets/plants/tulsi1.jpg" alt="Tulsi Plant">
+                <img src="assets/plants/tulsi2.jpg" alt="Tulsi Leaves">
+                <img src="assets/plants/tulsi3.jpg" alt="Tulsi Flowers">
+            </div>
+        </section>
+
+        <!-- Plant Description Section -->
+        <section class="plant-description">
+            <h2>About Tulsi</h2>
+            <p>Tulsi, also known as Holy Basil, is a sacred plant in India revered for its medicinal properties. It is widely used in Ayurveda for its ability to promote health and well-being.</p>
+        </section>
+
+        <!-- Medicinal Uses Section -->
+        <section class="medicinal-uses">
+            <h2>Medicinal Uses</h2>
+            <ul>
+                <li>Boosts immunity and fights infections.</li>
+                <li>Reduces stress and promotes mental clarity.</li>
+                <li>Supports respiratory health and relieves cough.</li>
+                <li>Acts as a natural detoxifier and antioxidant.</li>
+            </ul>
+        </section>
+
+        <!-- Cultivation Methods Section -->
+        <section class="cultivation-methods">
+            <h2>Cultivation Methods</h2>
+            <p>Tulsi thrives in warm climates and requires well-drained soil. It can be grown in pots or gardens with adequate sunlight and regular watering.</p>
+        </section>
+
+        <!-- Videos Section -->
+        <section class="plant-videos">
+            <h2>Videos</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/example" title="Tulsi Benefits" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/example2" title="How to Grow Tulsi" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Audio Explanation Section -->
+        <section class="audio-explanation">
+            <h2>Audio Explanation</h2>
+            <audio controls>
+                <source src="assets/audio/tulsi-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- 3D Model Section -->
+        <section class="plant-3d-model">
+            <h2>3D Model</h2>
+            <model-viewer src="assets/models/tulsi.glb" alt="3D Model of Tulsi" auto-rotate camera-controls></model-viewer>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

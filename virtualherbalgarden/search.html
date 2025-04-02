@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Virtual Herbal Garden Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="tours.html">Virtual Tours</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Section -->
+    <header class="search-header">
+        <h1>Search the Herbal Garden</h1>
+        <p>Find plants, remedies, and resources in our collection.</p>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for plants, remedies, or articles...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Results Section -->
+    <main class="results-container">
+        <h2>Search Results</h2>
+        <div id="resultsGrid" class="results-grid">
+            <!-- Results will be dynamically added here -->
+        </div>
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No Results Found</h3>
+            <p>We couldn't find any results for your search. Try refining your query or exploring our <a href="catalog.html">Plant Catalog</a>.</p>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination" class="pagination">
+            <!-- Pagination buttons will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>
